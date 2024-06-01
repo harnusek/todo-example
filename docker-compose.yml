@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/todo-example/db:/var/lib/postgresql/data
+    env_file:
+      - .env
